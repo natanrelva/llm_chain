@@ -4,7 +4,7 @@ import { HumanMessage } from "@langchain/core/messages";
 import customerSupportAgent from "./agents/customerSupportAgent";
 
 const agentFinalState = customerSupportAgent.invoke(
-  { messages: [new HumanMessage("what is the current weather in sf")] },
+  { messages: [new HumanMessage("Que dia é amanhã?")] },
   { configurable: { thread_id: "42" } },
 );
 

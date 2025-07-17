@@ -1,11 +1,12 @@
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
 
+import currentDateTimeTool from "../tools/calendarioTool"
+
 import llm from "../models/gemini"
-import { HumanMessage } from "@langchain/core/messages";
 
 const customerSupportAgent = createReactAgent({
   llm,
-  tools: []
+  tools: [currentDateTimeTool]
 })
 
 export default customerSupportAgent
