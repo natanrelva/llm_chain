@@ -1,0 +1,38 @@
+{
+  "name": "llm_chain",
+  "version": "1.0.0",
+  "description": "Projeto com LangChain e LLMs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/community": "^0.3.49",
+    "@langchain/core": "^0.3.64",
+    "@langchain/google-genai": "^0.2.15",
+    "@langchain/langgraph": "^0.3.9",
+    "@langchain/openai": "^0.6.1",
+    "cheerio": "^1.1.0",
+    "chrono-node": "^2.8.3",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "langchain": "^0.3.30",
+    "luxon": "^3.7.1",
+    "openai": "^5.10.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "@types/luxon": "^3.6.2",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
