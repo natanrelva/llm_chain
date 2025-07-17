@@ -26,3 +26,5 @@ coverage/
 
 # LangChain local cache (caso use memória local)
 .cache/
+
+.turbo
