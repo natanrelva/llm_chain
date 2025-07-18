@@ -6,7 +6,7 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended' // Disables conflicting rules
+        'plugin:prettier/recommended'
     ],
     overrides: [
         {
@@ -42,18 +42,13 @@ module.exports = {
                 printWidth: 100
             }
         ],
-
-        // Disable ESLint's indent rule completely
         indent: 'off',
         '@typescript-eslint/indent': 'off',
-
-        // Other rules
         'no-nested-ternary': 'off',
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
         '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
-        // TypeScript-specific rules
         '@typescript-eslint/no-explicit-any': 'off'
     }
 };
