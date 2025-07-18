@@ -7,7 +7,9 @@
   "scripts": {
     "dev:provider": "ts-node-dev src/index.ts",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",

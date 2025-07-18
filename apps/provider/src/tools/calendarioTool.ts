@@ -1,6 +1,4 @@
-import { DateTime } from "luxon";
-import { parseDate } from "chrono-node";
-import { DynamicTool } from "@langchain/core/tools";
+import { DynamicTool } from '@langchain/core/tools';
 
 // Função para obter a data atual
 function getCurrentDateTime({ format = 'default' } = {}) {
@@ -15,7 +13,7 @@ function getCurrentDateTime({ format = 'default' } = {}) {
     day: '2-digit', // Literal type: 'numeric' | '2-digit'
     hour: '2-digit', // Literal type: 'numeric' | '2-digit'
     minute: '2-digit', // Literal type: 'numeric' | '2-digit'
-    hour12: false, // Boolean
+    hour12: false // Boolean
   };
 
   switch (format.toLowerCase()) {
@@ -27,7 +25,7 @@ function getCurrentDateTime({ format = 'default' } = {}) {
         timeZone: 'America/Sao_Paulo',
         year: 'numeric',
         month: '2-digit',
-        day: '2-digit',
+        day: '2-digit'
       });
       break;
     case 'full':
@@ -41,7 +39,7 @@ function getCurrentDateTime({ format = 'default' } = {}) {
   return {
     status: 'success',
     date: formattedDate,
-    timestamp: now.toISOString(),
+    timestamp: now.toISOString()
   };
 }
 
@@ -61,7 +59,8 @@ async function handleDateAction(input: string) {
 }
 
 export default new DynamicTool({
-  name: "formatar_data",
-  description: 'Ferramenta para obter a data e hora atuais. A entrada deve ser uma string JSON com "action" (opcional, padrão "get_current_date") e "format" (opcional: "default", "iso", "short", "full").',
+  name: 'formatar_data',
+  description:
+    'Ferramenta para obter a data e hora atuais. A entrada deve ser uma string JSON com "action" (opcional, padrão "get_current_date") e "format" (opcional: "default", "iso", "short", "full").',
   func: handleDateAction
 });

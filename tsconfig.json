@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2021",
-    "module": "CommonJS",
+    "module": "esnext",
     "lib": [
       "ES2021"
     ],
@@ -11,9 +11,13 @@
     "strict": true,
     "skipLibCheck": true,
     "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
       "*": [
         "node_modules/*"
+      ],
+      "backend": [
+        "apps/backend/*"
       ]
     }
   },
