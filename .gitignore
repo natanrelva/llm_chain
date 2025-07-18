@@ -1,30 +1,78 @@
 # Node.js
 node_modules/
-dist/
-build/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Env files
-.env
-.env.*.local
-
-# VSCode
-.vscode/
+# Diretórios de build em qualquer lugar do projeto
+**/dist/
+**/build/
+**/out/
+**/.next/
+**/.vercel/
+**/.turbo/
+**/.expo/
+**/.cache/
+**/tmp/
+**/temp/
+**/coverage/
 
 # TypeScript
-*.tsbuildinfo
+**/*.tsbuildinfo
 
-# Optional OS files
+# Logs
+logs/
+*.log
+**/*.log
+
+# dotenv
+.env
+.env.*
+!.env.example
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# SOs
 .DS_Store
 Thumbs.db
 
-# Coverage reports
-coverage/
+# Docker
+**/.docker/
+.dockerignore
 
-# LangChain local cache (caso use memória local)
-.cache/
+# Testes
+**/test-output/
+**/.nyc_output/
 
-.turbo
+# Gerados por bundlers
+**/*.bundle.*
+**/*.min.*
+
+# Relatórios
+*.lcov
+*.clover
+
+# Arquivos de lock antigos
+package-lock.bak.json
+yarn.lock.bak
+
+# Arquivos exportados / gerados
+**/*.export.*
+**/*.generated.*
+
+# Outras pastas comuns de saída
+**/release/
+**/bin/
+**/obj/
+
+# Git hooks locais
+.husky/
+
+# Custom: para apagar pastas já comitadas mesmo se estiverem dentro de outros diretórios
+!src/**/dist/
+!src/**/build/
