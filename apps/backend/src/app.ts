@@ -18,5 +18,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api/v1', Route);
 
 app.listen(port, () => {
-	console.log(`Server is running on port http://127.0.0.1:${port}`);
+  console.log(`Server is running on port http://127.0.0.1:${port}`);
 });

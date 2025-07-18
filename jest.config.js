@@ -4,5 +4,5 @@ module.exports = {
   testMatch: ['**/__tests__/**/*.test.ts'],
   moduleFileExtensions: ['ts', 'js'],
   roots: ['<rootDir>/src'],
-  verbose: true
+  verbose: true,
 };

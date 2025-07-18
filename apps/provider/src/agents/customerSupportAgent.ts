@@ -1,12 +1,11 @@
-import { createReactAgent } from "@langchain/langgraph/prebuilt";
+import { createReactAgent } from '@langchain/langgraph/prebuilt';
 
-import currentDateTimeTool from "../tools/calendarioTool"
-
-import llm from "../models/gemini"
+import llm from '../models/gemini';
+import currentDateTimeTool from '../tools/calendarioTool';
 
 const customerSupportAgent = createReactAgent({
   llm,
-  tools: [currentDateTimeTool]
-})
+  tools: [currentDateTimeTool],
+});
 
-export default customerSupportAgent
+export default customerSupportAgent;

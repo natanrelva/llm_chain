@@ -8,10 +8,5 @@
     "*.ts",
     "*.tsx"
   ],
-  "exclude": [
-    ".eslintrc.cjs",
-    "node_modules",
-    "dist",
-    "build"
-  ]
+  "exclude": [".eslintrc.cjs", "node_modules", "dist", "build"]
 }

@@ -1,15 +1,17 @@
-import { Router } from "express"
-import UserAuthController from "../Controller/Auth/User"
-import { middleware } from "../Lib/Utils/Middleware"
-import UserRouter from "./User"
+import { Router } from 'express';
 
-const Route: Router = Router()
+import UserAuthController from '../Controller/Auth/User';
+import { middleware } from '../Lib/Utils/Middleware';
 
-Route.post("/user/login", UserAuthController.login)
-Route.post("/user/register", UserAuthController.register)
+import UserRouter from './User';
 
-Route.use(middleware)
+const Route: Router = Router();
 
-Route.use("/user", UserRouter)
+Route.post('/user/login', UserAuthController.login);
+Route.post('/user/register', UserAuthController.register);
 
-export default Route
+Route.use(middleware);
+
+Route.use('/user', UserRouter);
+
+export default Route;

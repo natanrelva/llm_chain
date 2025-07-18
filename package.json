@@ -13,9 +13,9 @@
     "dev:provider": "turbo run dev --filter=provider",
     "build": "turbo run build",
     "test": "turbo run test",
-    "lint": "eslint 'apps/**/*.{js,cjs,ts,tsx}' --fix",
-    "format": "prettier --write 'apps/**/*.{js,cjs,ts,tsx,json,yml,yaml}'",
-    "typecheck": "tsc --noEmit -b apps/backend apps/provider"
+    "lint": "eslint . --ext .ts,.tsx,.js,.cjs",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.cjs --fix",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",
