@@ -5,7 +5,7 @@ import currentDateTimeTool from '../tools/calendarioTool';
 
 const customerSupportAgent = createReactAgent({
   llm,
-  tools: [currentDateTimeTool],
+  tools: [currentDateTimeTool]
 });
 
 export default customerSupportAgent;
