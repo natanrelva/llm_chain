@@ -4,8 +4,9 @@
   "description": "Projeto com LangChain e LLMs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "dev:provider": "ts-node-dev src/index.ts",
+    "dev": "tsx src/index.ts",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx --fix",
@@ -22,7 +23,6 @@
     "@langchain/openai": "^0.6.1",
     "cheerio": "^1.1.0",
     "chrono-node": "^2.8.3",
-    "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "langchain": "^0.3.30",
     "langsmith": "^0.3.46",
@@ -39,6 +39,7 @@
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.3",
     "turbo": "^2.5.5",
     "typescript": "^5.8.3"
   }

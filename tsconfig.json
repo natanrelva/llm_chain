@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES2021",
     "module": "esnext",
-    "lib": ["ES2021"],
+    "lib": [
+      "ES2021"
+    ],
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -11,9 +13,18 @@
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "*": ["node_modules/*"],
-      "backend": ["apps/backend/*"]
+      "*": [
+        "node_modules/*"
+      ],
+      "backend": [
+        "apps/backend/*"
+      ]
     }
   },
-  "exclude": ["node_modules", "dist", "build", "**/*.test.ts"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts"
+  ],
 }

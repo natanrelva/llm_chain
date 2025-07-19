@@ -6,9 +6,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:prettier/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -21,7 +19,11 @@
     ],
     "tsconfigRootDir": "."
   },
-  "plugins": ["@typescript-eslint", "prettier", "import", "n", "promise"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "import"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "@typescript-eslint/no-unused-vars": [
@@ -32,12 +34,18 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/explicit-module-boundary-types": "warn",
     "@typescript-eslint/consistent-type-imports": "error",
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc",
@@ -48,53 +56,43 @@
     "no-console": [
       "warn",
       {
-        "allow": ["warn", "error"]
+        "allow": [
+          "warn",
+          "error"
+        ]
       }
     ],
-    "no-debugger": "error",
-    "no-duplicate-imports": "error"
+    "no-debugger": "error"
   },
   "overrides": [
     {
-      "files": ["*.js", "*.cjs"],
-      "env": {
-        "node": true
-      },
+      "files": [
+        "*.js",
+        "*.cjs"
+      ],
       "parserOptions": {
         "sourceType": "script"
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": [
+        "*.test.ts",
+        "*.spec.ts"
+      ],
       "rules": {
-        "@typescript-eslint/explicit-function-return-type": [
-          "warn",
-          {
-            "allowExpressions": true
-          }
-        ]
+        "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
-      "files": ["*.test.ts", "*.spec.ts"],
-      "rules": {
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-non-null-assertion": "off"
-      }
-    },
-    {
-      "files": ["apps/backend/**/*.{ts,tsx}"],
+      "files": [
+        "apps/backend/**/*.{ts,tsx}",
+        "apps/provider/**/*.{ts,tsx}"
+      ],
       "env": {
         "node": true
       },
       "rules": {
         "no-console": "off"
-      }
-    },
-    {
-      "files": ["apps/provider/**/*.{ts,tsx}"],
-      "env": {
-        "node": true
       }
     }
   ]
